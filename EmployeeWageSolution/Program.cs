@@ -8,14 +8,19 @@ namespace EmployeeWageSolution
         {
 
             int full_Time = 1;
-            int emp_Rate_Per_Hour = 8;
+            int part_Time = 2;
+            int emp_Rate_Per_Hour = 20;
 
             int empWage, empHrs;
             Random random = new Random();
-            int empCheck = random.Next(0, 2);
+            int empCheck = random.Next(0, 3);
             if (empCheck == full_Time)
             {
                 empHrs = 8;
+            }
+            else if (empCheck == part_Time)
+            {
+                empHrs = 4;
             }
             else
             {
