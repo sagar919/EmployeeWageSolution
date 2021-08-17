@@ -7,19 +7,25 @@ namespace EmployeeWageSolution
         static void Main(string[] args)
         {
 
-            int full_day = 1;
+            int full_Time = 1;
+            int emp_Rate_Per_Hour = 8;
 
+            int empWage, empHrs;
             Random random = new Random();
-            int day = random.Next(0, 2);
-            if (day == full_day)
+            int empCheck = random.Next(0, 2);
+            if (empCheck == full_Time)
             {
-                Console.WriteLine("Employee is present");
+                empHrs = 8;
             }
             else
             {
-                Console.WriteLine("Employee is absent");
+                empHrs = 0;
             }
+
+            empWage = empHrs * emp_Rate_Per_Hour;
+            Console.WriteLine("Employee Wage is" + empWage);
         }
 
-    }   }
+    }   
+}
 
